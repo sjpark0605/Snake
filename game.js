@@ -11,7 +11,7 @@ let snake = [
     {x: 160, y: 200}
 ];
 
-let startSnake = [...snake];
+let startSnake = JSON.parse(JSON.stringify(snake));
 
 const GAME_SPEED = 50;
 
@@ -35,7 +35,7 @@ document.addEventListener("keydown", changeDirection);
 function startGame() {
     if (gameOver) {
         gameOver = false;
-        snake = [...startSnake];
+        snake = JSON.parse(JSON.stringify(startSnake));
         dx = 10;
         dy = 0;
         score = 0;
