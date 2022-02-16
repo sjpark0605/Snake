@@ -56,7 +56,6 @@ function main() {
         document.getElementById('score').innerHTML = "Game Over!";
         document.getElementById('startButton').innerHTML = "Restart Game";
         document.getElementById('startButton').disabled = false;
-        snake = [...startSnake];
         return;
     }
 
